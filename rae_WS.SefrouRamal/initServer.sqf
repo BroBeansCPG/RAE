@@ -1,0 +1,1 @@
+[] execVM "rae\raeInit.sqf";
