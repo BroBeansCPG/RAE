@@ -149,6 +149,7 @@ if (_crate distance _pos < 50) exitWith {
 		deleteVehicle _x;
 	} forEach _missionObjects;
 	deleteMarker _blMissionAreaID;
+	raeCurrentMissions - [_missionID];
 	[_missionID] call rae_fnc_deleteJVMF;
 	if (raeDebug) then {deleteMarker _missionID};
 };
@@ -161,6 +162,7 @@ if (_objTask call BIS_fnc_taskState == "Canceled") exitWith {
 		deleteVehicle _x;
 	} forEach _missionObjects;
 	deleteMarker _blMissionAreaID;
+	raeCurrentMissions - [_missionID];
 	[_missionID] call rae_fnc_deleteJVMF;
 	if (raeDebug) then {deleteMarker _missionID};
 };

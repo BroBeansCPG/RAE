@@ -1,5 +1,7 @@
 params ["_missionID"];
 
+if (!(isClass (configFile >> "cfgPatches" >> "vtx_main"))) exitWith {};
+
 _idx = 0;
 for "_i" from 0 to (count VTX_JVMF_MESSAGES) do {
 	_array = VTX_JVMF_MESSAGES # _i;
